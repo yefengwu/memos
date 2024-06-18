@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+</head>
+
+<body>
+    <div class="top">
+        <h4 class="top-left">Memos</h4>
+        <div class="top-right">
+            <button id="btnSetting" class="btn-setting" data-tooltip="设置">
+                <i class="iconfont icon-settings"></i>
+            </button>
+        </div>
+    </div>
+    <div class="middle">
+        <textarea id="inputContainer" class="input-container" placeholder="记录一下现在的想法"></textarea>
+    </div>
+    <div class="bottom">
+        <div class="bottom-left">
+            <button id="btnTodo" class="btn-input" data-tooltip="创建新的Todo">
+                <i class="iconfont icon-todo"></i>
+            </button>
+            <button id="btnCodeblock" class="btn-input" data-tooltip="创建新的代码块">
+                <i class="iconfont icon-code-block"></i>
+            </button>
+            <button id="btnLabel" class="btn-input" data-tooltip="创建标签">
+                <i class="iconfont icon-label2biaoqian"></i>
+            </button>
+        </div>
+        <div class="bottom-right">
+            <div class="dropup">
+                <button id="dropbtn" class="dropbtn">
+                    <span data-value="PUBLIC" id="spOpenness">公开</span>
+                    <i id="dropbtnIcon" class="iconfont icon-up"></i>
+                </button>
+                <div id="dropContent" class="dropup-content">
+                    <span data-value="PRIVATE">私有</span>
+                    <span data-value="PROTECTED">工作区</span>
+                    <span data-value="PUBLIC">公开</span>
+                </div>
+            </div>
+            <button id="btnSend" class="btn-send">发送</button>
+        </div>
+    </div>
+    <div class="modal" id="settingModal">
+        <div class="top-bar">
+            <label class="lb-setting">设置</label>
+            <button id="btnClose" class="close-btn">
+                <i class="iconfont icon-close"></i>
+            </button>
+        </div>
+        <div class="form-content">
+            <div class="input-wrapper">
+                <span class="input-label">URL:</span>
+                <input id="domain" type="text" placeholder="Enter your URL">
+            </div>
+            <div class="input-wrapper">
+                <span class="input-label">TOKEN:</span>
+                <input id="token" type="password" placeholder="Enter your Token">
+            </div>
+        </div>
+        <div class="btn-group">
+            <button id="btnCancel" class="cancel-btn">取消</button>
+            <button id="btnConfirm" class="confirm-btn">确认</button>
+        </div>
+    </div>
+    <div id="msgBox" class="msgBox">
+        <span id="msgIcon"></span>
+        <span id="msgInfo"></span>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
